@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import cv2
 import numpy as np
 import rclpy
@@ -54,7 +53,7 @@ def determine_color(image):
 
     dominant_color = max(ratios, key=ratios.get)
     if ratios[dominant_color] < 0.05:
-        return "G"  # STOP if nothing dominant enough
+        return "G"
     return dominant_color
 
 
